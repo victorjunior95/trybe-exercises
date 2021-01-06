@@ -145,7 +145,7 @@ describe('Quando o tipo do animal existe', () => {
     try {
       await getListAnimals('Lion');
     } catch (error) {
-      expect(error).toEqual({ error: "Não possui esse tipo de animal." })
+      expect(error).toEqual({ error: "Não possui esse tipo de animal." });
     }
   });
 });

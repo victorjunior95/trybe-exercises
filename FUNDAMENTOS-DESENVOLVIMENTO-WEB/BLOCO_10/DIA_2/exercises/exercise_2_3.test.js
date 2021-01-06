@@ -17,3 +17,17 @@ describe('Verifica o resultado da função getUserName (Promisse)', () => {
 
 // Reescreva o teste do exercício anterior, desta vez utilizando a sintaxe de async/await .
 // Dica: Utilize o try/catch para o caso de erro.
+describe('Verifica o resultado da função getUserName (Async/Await)', () => {
+  it('caso em que o usuário é encontrado.', async () => {
+    const name = await getUserName(5);
+    expect(name).toEqual('Paul');
+  });
+
+  it('caso em que o usuário não é encontrado.', async () => {
+    try {
+      await getUserName(6);
+    } catch (error) {
+      expect(error).toEqual({ error: 'User with 6 not found.' })
+    };
+  });
+});
