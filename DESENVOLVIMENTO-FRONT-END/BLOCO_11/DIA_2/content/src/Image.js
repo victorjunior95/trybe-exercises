@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Image extends React.Component {
   render() {
@@ -6,4 +7,8 @@ class Image extends React.Component {
   }
 }
 
+Image.propTypes = {
+  source: PropTypes.string,
+  alternativeText: PropTypes.string
+}
 export default Image;
